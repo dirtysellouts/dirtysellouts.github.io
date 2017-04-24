@@ -1,0 +1,39 @@
+body {overflow-x:hidden}
+body, .navbar {min-width:400px}
+
+.container, .row, .navbar {margin:0 !important; padding:0 !important}
+#page_toggle, .student_thumbnail {cursor:pointer}
+
+.navbar, footer {position:fixed; width:100%; z-index:2; background-color:rgba(220,220,220,1)}
+.navbar {height:80px; border-radius:0}
+footer {bottom:0; text-align:center}
+
+#page_title {display:inline-block}
+#page_toggle {float:right; font-size:20px; margin-top:30px}
+
+#content {position:relative; width:100%; top:80px}
+
+#home, #about {position:absolute; width:100%}
+#about {left:100%}
+
+.student_thumbnail {width:100%; border:1px solid black}
+.text_container, .img_container {width:50%; float:left}
+
+.info {position:absolute; width:100%; z-index:1; background-color:rgba(80,80,80,1); display:none}
+.info .container {padding:40px !important}
+
+.student_img {max-width:100%; margin:0 auto; display:block}
+
+#map {width:600px}
+
+
+
+@media (max-width: 750px) {
+	.img_container {display:none}
+	.text_container {width:100%}
+}
+
+@media (min-width: 751px) {
+	.img_container {display:block}
+	.text_container {width:50%}
+}
