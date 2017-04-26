@@ -1,28 +1,54 @@
-body {overflow-x:hidden}
+body {overflow-x:hidden;
+font-family: 'Raleway', sans-serif;}
+
+
 body, .navbar {min-width:400px}
 
-.container, .row, .navbar {margin:0 !important; padding:0 !important}
-#page_toggle, .student_thumbnail {cursor:pointer}
+h2 {margin:0}
 
-.navbar, footer {position:fixed; width:100%; z-index:2; background-color:rgba(220,220,220,1)}
-.navbar {height:80px; border-radius:0}
-footer {bottom:0; text-align:center}
+.container, .row, .navbar {margin:0 !important; padding:0 !important}
+#page_toggle, .student_thumbnail, .thumbnail_name {cursor:pointer}
+
+.navbar, footer {width:100%; z-index:2;}
+.navbar {
+	height:100vh;
+	background-image: url(/img/bg.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	border-radius:0}
+
+.logo {
+	height: 400px;
+	width:787px;
+	background-image: url(/img/logo.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-left:10%;
+	margin-top:4%;
+}
+
+footer {text-align:center;
+display:block;margin: 20PX; 0}
 
 #page_title {display:inline-block}
-#page_toggle {float:right; font-size:20px; margin-top:30px}
+#page_toggle {float:right; font-size:20px; margin-top:40px}
 
-#content {position:relative; width:100%; top:80px}
+#content {width:100%; top:80px}
 
-#home, #about {position:absolute; width:100%}
-#about {left:100%}
+#home, #about {width:100%; }
+#about {}
 
-.student_thumbnail {width:100%; border:1px solid black}
+.student_thumbnail {width:100%; border:0px solid black}
+.thumbnail_name {position:absolute; width:100%; top:50%; margin-top:-5px; text-align:center; display:none; font-weight: bold;}
+.student_thumbnail:hover ~ .thumbnail_name {display:block;} .thumbnail_name:hover {display:block;}
 .text_container, .img_container {width:50%; float:left}
 
-.info {position:absolute; width:100%; z-index:1; background-color:rgba(80,80,80,1); display:none}
+.info {position:absolute; width:100%; z-index:1; background-color:rgb(248, 248, 248); display:none}
 .info .container {padding:40px !important}
 
 .student_img {max-width:100%; margin:0 auto; display:block}
+.student_bio {margin-top:20px,}
+.student_name {font-weight: bold; font-size: 40px; margin-bottom:20px;}
 
 #map {width:600px}
 

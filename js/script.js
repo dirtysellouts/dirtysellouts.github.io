@@ -87,13 +87,15 @@ $(document).ready(function(){
 		<div id="' + n + '" class="student container col-sm-2">\
 			<div class="row">\
 				<img class="student_thumbnail" src="img/' + n + '.jpg">\
+				<h2 class="thumbnail_name">' + student_name[n] + '</h2>\
 			</div>\
 			<div class="info row">\
 				<div class="container img_container">\
 					<img class="student_img" src="img/' + n + '.jpg">\
 				</div>\
 				<div class="container text_container">\
-					<p class="student_text">' + student_info[n] + '</p>\
+					<h2 class="student_name">' + student_name[n] + '</h2>\
+					<div class="student_bio">' + student_bio[n] + '</div>\
 					<a class="portfolio_link" href="http://' + student_web[n] + '/">' + student_web[n] + '</a>\
 				</div>\
 			</div>\
