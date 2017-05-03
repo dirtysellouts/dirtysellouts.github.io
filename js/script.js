@@ -25,22 +25,12 @@ $(document).ready(function(){
 	}
 	
 	
-	$(".student").click(function(){
-		_id = Number($(this).attr("id"));
-		_info = $("#" + _id + " .info");
-		
-		$(".student:not(#" + _id + ") .info").hide();
-		
-		_offset = info_offset((_id+1) % 6);
-		
-		if ($(window).width() > 750){
-			_info.css({"left":_offset});
-		}else {
-			_info.css({"left":0});
-		};
-		
-		_info.width($(window).width());
-		_info.slideToggle(200);
+	$(".student_thumbnail").click(function(){
+		student_click(this);
+	});
+	
+	$(".thumbnail_name").click(function(){
+		student_click(this);
 	});
 	
 	
@@ -58,6 +48,26 @@ $(document).ready(function(){
 	
 	
 	/* FUNCTIONS */
+	
+	
+	function student_click(e){
+		_id = Number($(e).closest(".student").attr("id"));
+		_info = $("#" + _id + " .info");
+		
+		$(".student:not(#" + _id + ") .info").hide();
+		
+		_offset = info_offset((_id+1) % 6);
+		
+		if ($(window).width() > 750){
+			_info.css({"left":_offset});
+		}else {
+			_info.css({"left":0});
+		};
+		
+		_info.width($(window).width());
+		_info.slideToggle(200);
+	}
+	
 	
 	function info_offset(n){
 		switch(n){
@@ -82,6 +92,7 @@ $(document).ready(function(){
 			};
 	}
 	
+	
 	function new_sudent(n){
 		_home.append('\
 		<div id="' + n + '" class="student container col-sm-2">\
@@ -96,7 +107,7 @@ $(document).ready(function(){
 				<div class="container text_container">\
 					<h2 class="student_name">' + student_name[n] + '</h2>\
 					<div class="student_bio">' + student_bio[n] + '</div>\
-					<a class="portfolio_link" href="http://' + student_web[n] + '/">' + student_web[n] + '</a>\
+					<a class="portfolio_link" target="_blank" href="http://' + student_web[n] + '/">' + student_web[n] + '</a>\
 				</div>\
 			</div>\
 		</div>\
