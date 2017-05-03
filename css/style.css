@@ -84,7 +84,7 @@ p {font-size: 15px; max-width: 500px;}
 	font-size: 80px;
 	font-weight: 900;
 margin-bottom: 30px;
-border-bottom: 5px, black;}
+border-bottom: 5px, #000000;}
 
 #date {
 	font-size: 40px;
@@ -119,6 +119,9 @@ border-bottom: 5px, black;}
 }
 
 @media (min-width: 751px) {
+	.about_header {
+	font-size: 20px;
+	font-weight: 900;}
 	.img_container {display:block}
 	.text_container {width:50%}
 }
