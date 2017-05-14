@@ -34,6 +34,24 @@ $(document).ready(function(){
 	});
 	
 	
+	$(".student_thumbnail").mouseenter(function(){
+		student_hover(this,0);
+	});
+	
+	$(".thumbnail_name").mouseenter(function(){
+		student_hover(this,0);
+	});
+	
+	
+	$(".student_thumbnail").mouseleave(function(){
+		student_hover(this,1);
+	});
+	
+	$(".thumbnail_name").mouseleave(function(){
+		student_hover(this,1);
+	});
+	
+	
 	$(window).resize(function(){
 		if (_info != undefined){
 			_info.width($(this).width());
@@ -66,6 +84,25 @@ $(document).ready(function(){
 		
 		_info.width($(window).width());
 		_info.slideToggle(200);
+		
+		$('html,body').animate({
+		     scrollTop: $(_info).offset().top - 80},
+		'slow');
+	}
+	
+	
+	function student_hover(e, action){
+		_id = Number($(e).closest(".student").attr("id"));
+		
+		if (action == 0){
+			$("#" + _id + " .abv_img").css("display","block");
+			$("#" + _id + " .blw_name").css("display","block");
+			$("#" + _id + " .thumbnail_name").css("display","block");
+		}else if (action == 1){
+			$("#" + _id + " .abv_img").css("display","none");
+			$("#" + _id + " .blw_name").css("display","none");
+			$("#" + _id + " .thumbnail_name").css("display","none");
+		}
 	}
 	
 	
@@ -97,8 +134,10 @@ $(document).ready(function(){
 		_home.append('\
 		<div id="' + n + '" class="student container col-sm-2">\
 			<div class="row">\
+				<div class="abv_img"></div>\
 				<img class="student_thumbnail" src="img/' + n + '.jpg">\
 				<h2 class="thumbnail_name">' + student_name[n] + '</h2>\
+				<div class="blw_name"></div>\
 			</div>\
 			<div class="info row">\
 				<div class="container img_container">\
