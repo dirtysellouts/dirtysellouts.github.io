@@ -6,8 +6,8 @@ body, .navbar {min-width:400px}
 h2 {margin:0;}
 
 .logo {
-	height: 200px;
-	width:100px;
+	height:200px;
+	width:200px;
 	background-image: url(../img/logo.png);
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -26,11 +26,11 @@ a {
 #page_toggle, .student_thumbnail, .thumbnail_name {cursor:pointer}
 
 .navbar, footer {position:fixed; width:100%; z-index:2; background-color:rgba(255, 255, 255, 0.6)}
-.navbar {height:80px; border-radius:0; margin-bottom: 10vh;}
+.navbar {height:150px; border-radius:0; margin-bottom: 10vh;}
 footer {bottom:0; text-align:center}
 
-#page_title {display:inline-block; height:50px;}
-#page_toggle {float:right; font-size:20px; font-weight: normal; margin-top:30px; margin-right:30px;}
+#page_title {height:50px; display:inline-block}
+#page_toggle {float:right; font-size:18px; font-weight: bold; margin-top:30px; margin-right:30px;}
 
 #content {position:relative; width:100%; top:20vh}
 
@@ -57,6 +57,9 @@ footer {bottom:0; text-align:center}
 
 .abv_img, .blw_name {display:none}
 
+.web-copy {max-width:1200px; margin:70px auto 0 auto; padding:0 30px; text-align:center}
+.web-copy p {max-width:1200px; font-size:20px; margin-bottom:18px}
+
 /********* EDIT **********/
 
 .text_container, .img_container {width:50%; float:left}
@@ -65,14 +68,14 @@ h2.student_name {font-size: 70px; margin-left: -2px; font-weight: bold;}
 
 p {font-size: 15px; max-width: 500px;}
 
-.info {position:absolute; width:100%; z-index:1; background-color:rgb(239, 239, 239); display:none}
+.info {position:absolute; width:100%; z-index:1; background-color:white; display:none}
 .info .container {padding:40px !important}
 
 .student_img {max-width:100%; margin:0 auto; display:block}
 .student_bio {margin-top:20px}
 
 .about {
-	display: flex;
+	display: flex; max-height: 460px;
 }
 
 .about-info {
@@ -102,7 +105,7 @@ border-bottom: 5px, #000000;}
 	font-size: 30px;
 }
 
-.college {width: 100%;}
+.college {width: 300px; margin: 0 auto;}
 
 .college-text {
 	text-align: center;
@@ -112,8 +115,9 @@ border-bottom: 5px, #000000;}
 	text-decoration: underline;
 }
 
-.college-img {text-align: center;
-	margin: 30px auto 0;
+.college-img, .teesside-img {text-align: center;
+	margin-top:30px;
+	display: inline-block;
 	text-decoration: underline;
 	width: 120px;
 	height: 100px;
@@ -121,6 +125,9 @@ border-bottom: 5px, #000000;}
 	background-repeat: no-repeat;
 	background-size: contain;
 }
+
+
+.teesside-img {float:right; background-image: url(../img/teesside.png)}
 	
 
 @media (max-width: 750px) {

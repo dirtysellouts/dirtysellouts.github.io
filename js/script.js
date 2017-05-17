@@ -6,13 +6,13 @@ $(document).ready(function(){
 	
 	
 	$("#page_toggle").click(function(){
-		if ($(this).html() == "About"){
-			$(this).html("Home");
+		if ($(this).html() == "ABOUT"){
+			$(this).html("HOME");
 			
 			$("#home").animate({"left":"-100%"},_swap_speed);
 			$("#about").animate({"left":0},_swap_speed);
 		}else {
-			$(this).html("About");
+			$(this).html("ABOUT");
 			
 			$("#home").animate({"left":0},_swap_speed);
 			$("#about").animate({"left":"100%"},_swap_speed);
@@ -86,8 +86,8 @@ $(document).ready(function(){
 		_info.slideToggle(200);
 		
 		$('html,body').animate({
-		     scrollTop: $(_info).offset().top - 80},
-		'slow');
+			scrollTop: $(_info).offset().top - 150},
+        'slow');
 	}
 	
 	
@@ -98,10 +98,12 @@ $(document).ready(function(){
 			$("#" + _id + " .abv_img").css("display","block");
 			$("#" + _id + " .blw_name").css("display","block");
 			$("#" + _id + " .thumbnail_name").css("display","block");
+			$("#" + _id + " .student_thumbnail").css("opacity",0.5);
 		}else if (action == 1){
 			$("#" + _id + " .abv_img").css("display","none");
 			$("#" + _id + " .blw_name").css("display","none");
 			$("#" + _id + " .thumbnail_name").css("display","none");
+			$("#" + _id + " .student_thumbnail").css("opacity",1);
 		}
 	}
 	
